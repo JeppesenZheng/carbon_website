@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "../vendor/shadcn-tailwind-4.13.0.css";
+
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility scrollbar-gutter-stable {
+  scrollbar-gutter: stable;
+}
+
+:root {
+  --background: #f7f8f4;
+  --foreground: #111713;
+  --card: #ffffff;
+  --card-foreground: #111713;
+  --popover: #ffffff;
+  --popover-foreground: #111713;
+  --primary: #111713;
+  --primary-foreground: #ffffff;
+  --secondary: #edf0ea;
+  --secondary-foreground: #111713;
+  --muted: #edf0ea;
+  --muted-foreground: #626b65;
+  --accent: #c7ff45;
+  --accent-foreground: #111713;
+  --destructive: #d83b35;
+  --border: #cfd5cf;
+  --input: #cfd5cf;
+  --ring: #9dde2a;
+  --chart-1: #9dde2a;
+  --chart-2: #5dbaf0;
+  --chart-3: #111713;
+  --chart-4: #d4a72c;
+  --chart-5: #707b73;
+  --radius: 0.25rem;
+  --sidebar: #eff2ec;
+  --sidebar-foreground: #111713;
+  --sidebar-primary: #111713;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #c7ff45;
+  --sidebar-accent-foreground: #111713;
+  --sidebar-border: #cfd5cf;
+  --sidebar-ring: #9dde2a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #c7ff45;
+  color: #101512;
+}
+
+.carbon-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
+}
+
+.dataset-card::after {
+  content: "";
+  position: absolute;
+  right: -3.2rem;
+  bottom: -3.2rem;
+  width: 9rem;
+  height: 9rem;
+  border: 1px solid rgba(17, 23, 19, 0.1);
+  border-radius: 999px;
+  box-shadow: 0 0 0 18px rgba(17, 23, 19, 0.025), 0 0 0 36px rgba(17, 23, 19, 0.018);
+  pointer-events: none;
+  transition: transform 350ms ease;
+}
+
+.dataset-card:hover::after {
+  transform: scale(1.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

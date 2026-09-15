@@ -1,0 +1,17 @@
+{
+  "id": "scope3trace",
+  "name": "Scope3Trace",
+  "category": "value-chain trace data",
+  "status": "pre-release",
+  "description": "A structured dataset for studying how Scope 3 emissions claims connect to activities, suppliers, and underlying evidence.",
+  "research_uses": [
+    "traceability",
+    "entity linking",
+    "evidence retrieval"
+  ],
+  "release": {
+    "data_package": "in-preparation",
+    "documentation": "in-preparation",
+    "citation": "in-preparation"
+  }
+}

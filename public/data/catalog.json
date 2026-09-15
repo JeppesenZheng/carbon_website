@@ -1,0 +1,17 @@
+{
+  "title": "Carbon Data Hub",
+  "status": "research-preview",
+  "updated": "2026-09",
+  "datasets": [
+    {
+      "id": "scope3trace",
+      "name": "Scope3Trace",
+      "metadata": "/data/scope3trace.json"
+    },
+    {
+      "id": "ghgbench",
+      "name": "GHGBench",
+      "metadata": "/data/ghgbench.json"
+    }
+  ]
+}

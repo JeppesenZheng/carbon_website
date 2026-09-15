@@ -1,0 +1,17 @@
+{
+  "id": "ghgbench",
+  "name": "GHGBench",
+  "category": "evaluation benchmark",
+  "status": "pre-release",
+  "description": "A benchmark dataset for evaluating models and systems that work with greenhouse-gas disclosures, calculations, and reporting tasks.",
+  "research_uses": [
+    "model evaluation",
+    "structured extraction",
+    "reproducibility"
+  ],
+  "release": {
+    "data_package": "in-preparation",
+    "documentation": "in-preparation",
+    "citation": "in-preparation"
+  }
+}
