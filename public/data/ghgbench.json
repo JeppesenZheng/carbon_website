@@ -1,6 +1,7 @@
 {
   "id": "ghgbench",
   "name": "GHGBench",
+  "publisher": "Data Cruiser",
   "category": "evaluation benchmark",
   "status": "pre-release",
   "description": "A benchmark dataset for evaluating models and systems that work with greenhouse-gas disclosures, calculations, and reporting tasks.",

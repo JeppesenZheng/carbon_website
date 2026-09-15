@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Carbon Data Hub | Scope3Trace & GHGBench",
   description:
-    "A research data portal for the Scope3Trace and GHGBench carbon datasets.",
+    "A Data Cruiser research initiative for the Scope3Trace and GHGBench carbon datasets.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

@@ -1,6 +1,7 @@
 {
   "id": "scope3trace",
   "name": "Scope3Trace",
+  "publisher": "Data Cruiser",
   "category": "value-chain trace data",
   "status": "pre-release",
   "description": "A structured dataset for studying how Scope 3 emissions claims connect to activities, suppliers, and underlying evidence.",

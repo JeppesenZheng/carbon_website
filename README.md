@@ -1,6 +1,6 @@
 # Carbon Data Hub
 
-An English-language research data portal for the Scope3Trace and GHGBench carbon datasets.
+An English-language Data Cruiser research initiative for the Scope3Trace and GHGBench carbon datasets.
 
 ## MVP
 

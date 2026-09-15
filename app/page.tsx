@@ -56,8 +56,14 @@ export default function Home() {
             <span className="grid size-9 place-items-center rounded-full border border-[#c7ff45]/35 bg-[#c7ff45] text-[11px] font-black tracking-[-0.08em] text-[#101512] transition-transform group-hover:rotate-6">
               CO₂
             </span>
-            <span className="text-sm font-semibold uppercase tracking-[0.14em]">
-              Carbon Data Hub
+            <span className="flex items-center gap-3">
+              <span className="text-sm font-semibold uppercase tracking-[0.14em]">
+                Carbon Data Hub
+              </span>
+              <span className="hidden h-4 w-px bg-white/20 xl:block" aria-hidden="true" />
+              <span className="hidden text-[11px] font-medium uppercase tracking-[0.12em] text-white/45 xl:block">
+                by Data Cruiser
+              </span>
             </span>
           </a>
 
@@ -99,7 +105,7 @@ export default function Home() {
           <div className="max-w-4xl">
             <div className="mb-7 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#c7ff45]">
               <span className="h-px w-10 bg-[#c7ff45]" />
-              Open carbon research infrastructure
+              Data Cruiser / Open carbon research
             </div>
             <h1 className="max-w-4xl text-[clamp(3.2rem,7.2vw,7.4rem)] font-semibold leading-[0.88] tracking-[-0.075em]">
               Evidence for
@@ -303,7 +309,10 @@ export default function Home() {
             </Button>
           </div>
           <div className="mt-14 flex flex-col gap-4 border-t border-white/12 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
-            <p>Scope3Trace · GHGBench</p>
+            <div className="flex items-center gap-3">
+              <span className="grid size-7 place-items-center border border-[#c7ff45]/35 font-mono text-[10px] font-semibold text-[#c7ff45]">DC</span>
+              <p>A Data Cruiser research initiative</p>
+            </div>
             <p>Research preview · September 2026</p>
           </div>
         </div>
