@@ -3,6 +3,7 @@ import {
   ArrowRight,
   Braces,
   Database,
+  ExternalLink,
   FileCheck2,
   GitBranch,
   Layers3,
@@ -22,6 +23,7 @@ const datasets = [
     purposes: ["Traceability", "Entity linking", "Evidence retrieval"],
     accent: "lime",
     metadata: "/data/scope3trace.json",
+    paper: "https://arxiv.org/abs/2607.17122",
   },
   {
     id: "02",
@@ -33,6 +35,7 @@ const datasets = [
     purposes: ["Model evaluation", "Structured extraction", "Reproducibility"],
     accent: "blue",
     metadata: "/data/ghgbench.json",
+    paper: "https://arxiv.org/abs/2605.13743",
   },
 ] as const;
 
@@ -196,12 +199,20 @@ export default function Home() {
                       <ArrowRight className="transition-transform group-hover:translate-x-1" aria-hidden="true" />
                     </a>
                   </Button>
-                  <Button asChild variant="outline" className="rounded-full border-black/20 bg-transparent px-4 shadow-none hover:border-black hover:bg-black hover:text-white">
-                    <a href={dataset.metadata} download>
-                      <Braces aria-hidden="true" />
-                      Metadata JSON
-                    </a>
-                  </Button>
+                  <div className="flex flex-wrap gap-2">
+                    <Button asChild variant="outline" className="rounded-full border-black/20 bg-transparent px-4 shadow-none hover:border-black hover:bg-black hover:text-white">
+                      <a href={dataset.paper} target="_blank" rel="noreferrer">
+                        arXiv paper
+                        <ExternalLink aria-hidden="true" />
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" className="rounded-full border-black/20 bg-transparent px-4 shadow-none hover:border-black hover:bg-black hover:text-white">
+                      <a href={dataset.metadata} download>
+                        <Braces aria-hidden="true" />
+                        Metadata JSON
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </article>

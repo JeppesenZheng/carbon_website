@@ -4,6 +4,7 @@
   "publisher": "Data Cruiser",
   "category": "value-chain trace data",
   "status": "pre-release",
+  "paper": "https://arxiv.org/abs/2607.17122",
   "description": "A structured dataset for studying how Scope 3 emissions claims connect to activities, suppliers, and underlying evidence.",
   "research_uses": [
     "traceability",
