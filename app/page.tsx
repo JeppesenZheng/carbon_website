@@ -46,14 +46,14 @@ const releaseRows = [
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#101512]/92 text-white backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0b1f33]/92 text-white backdrop-blur-xl">
         <div className="mx-auto flex h-[70px] max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-12">
           <a
             href="#top"
-            className="group flex items-center gap-3 rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-[#c7ff45]"
+            className="group flex items-center gap-3 rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-[#63d7e6]"
             aria-label="Carbon Data Hub home"
           >
-            <span className="grid size-9 place-items-center rounded-full border border-[#c7ff45]/35 bg-[#c7ff45] text-[11px] font-black tracking-[-0.08em] text-[#101512] transition-transform group-hover:rotate-6">
+            <span className="grid size-9 place-items-center rounded-full border border-[#63d7e6]/35 bg-[#63d7e6] text-[11px] font-black tracking-[-0.08em] text-[#0b1f33] transition-transform group-hover:rotate-6">
               CO₂
             </span>
             <span className="flex items-center gap-3">
@@ -81,14 +81,14 @@ export default function Home() {
 
           <div className="flex items-center gap-3">
             <span className="hidden items-center gap-2 text-xs font-medium uppercase tracking-[0.12em] text-white/55 sm:flex">
-              <span className="size-1.5 rounded-full bg-[#c7ff45] shadow-[0_0_12px_#c7ff45]" />
+              <span className="size-1.5 rounded-full bg-[#63d7e6] shadow-[0_0_12px_#63d7e6]" />
               Research preview
             </span>
             <Button
               asChild
               variant="outline"
               size="sm"
-              className="h-9 rounded-full border-white/20 bg-white/5 px-4 text-white shadow-none hover:border-[#c7ff45]/55 hover:bg-[#c7ff45] hover:text-[#101512]"
+              className="h-9 rounded-full border-white/20 bg-white/5 px-4 text-white shadow-none hover:border-[#63d7e6]/55 hover:bg-[#63d7e6] hover:text-[#0b1f33]"
             >
               <a href="/data/catalog.json" download>
                 <ArrowDownToLine aria-hidden="true" />
@@ -99,17 +99,17 @@ export default function Home() {
         </div>
       </header>
 
-      <section id="top" className="relative bg-[#101512] text-white">
+      <section id="top" className="relative bg-[#0b1f33] text-white">
         <div className="carbon-grid absolute inset-0 opacity-40" aria-hidden="true" />
         <div className="relative mx-auto grid max-w-[1440px] gap-10 px-5 pb-16 pt-14 sm:px-8 sm:pb-20 sm:pt-20 lg:grid-cols-[minmax(0,1.35fr)_minmax(360px,0.65fr)] lg:px-12 lg:pb-24 lg:pt-24">
           <div className="max-w-4xl">
-            <div className="mb-7 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#c7ff45]">
-              <span className="h-px w-10 bg-[#c7ff45]" />
+            <div className="mb-7 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#63d7e6]">
+              <span className="h-px w-10 bg-[#63d7e6]" />
               Data Cruiser / Open carbon research
             </div>
             <h1 className="max-w-4xl text-[clamp(3.2rem,7.2vw,7.4rem)] font-semibold leading-[0.88] tracking-[-0.075em]">
               Evidence for
-              <span className="block text-[#c7ff45]">credible carbon.</span>
+              <span className="block text-[#63d7e6]">credible carbon.</span>
             </h1>
             <div className="mt-9 flex max-w-3xl flex-col gap-7 border-t border-white/15 pt-6 sm:flex-row sm:items-end sm:justify-between">
               <p className="max-w-xl text-base leading-7 text-white/63 sm:text-lg sm:leading-8">
@@ -118,7 +118,7 @@ export default function Home() {
               <Button
                 asChild
                 size="lg"
-                className="h-12 self-start rounded-full bg-[#c7ff45] px-6 font-semibold text-[#101512] hover:bg-[#dcff8c] sm:self-auto"
+                className="h-12 self-start rounded-full bg-[#63d7e6] px-6 font-semibold text-[#0b1f33] hover:bg-[#a8edf3] sm:self-auto"
               >
                 <a href="#datasets">
                   Explore the datasets
@@ -131,20 +131,20 @@ export default function Home() {
           <aside className="self-end border border-white/15 bg-white/[0.035] p-5 shadow-[0_22px_70px_rgba(0,0,0,0.22)] sm:p-7" aria-label="Data pipeline overview">
             <div className="mb-9 flex items-center justify-between">
               <span className="text-xs font-semibold uppercase tracking-[0.16em] text-white/50">Evidence chain</span>
-              <span className="font-mono text-xs text-[#c7ff45]">2 DATASETS / 1 HUB</span>
+              <span className="font-mono text-xs text-[#63d7e6]">2 DATASETS / 1 HUB</span>
             </div>
             <div className="space-y-2">
               {["Source records", "Structured evidence", "Comparable tasks", "Research outcomes"].map((label, index) => (
-                <div key={label} className="group grid grid-cols-[34px_1fr_auto] items-center gap-4 border-t border-white/10 py-3.5 first:border-[#c7ff45]/60">
+                <div key={label} className="group grid grid-cols-[34px_1fr_auto] items-center gap-4 border-t border-white/10 py-3.5 first:border-[#63d7e6]/60">
                   <span className="font-mono text-xs text-white/35">0{index + 1}</span>
                   <span className="text-sm font-medium text-white/80 transition-colors group-hover:text-white">{label}</span>
-                  <span className={`h-1.5 rounded-full ${index === 0 ? "w-11 bg-[#c7ff45]" : index === 1 ? "w-8 bg-[#9ed8ff]" : index === 2 ? "w-6 bg-white/45" : "w-3 bg-white/25"}`} />
+                  <span className={`h-1.5 rounded-full ${index === 0 ? "w-11 bg-[#63d7e6]" : index === 1 ? "w-8 bg-[#a8c8ff]" : index === 2 ? "w-6 bg-white/45" : "w-3 bg-white/25"}`} />
                 </div>
               ))}
             </div>
             <div className="mt-7 grid grid-cols-3 gap-2">
               {["Scope 1", "Scope 2", "Scope 3"].map((scope, index) => (
-                <div key={scope} className={`border px-3 py-3 text-center font-mono text-[11px] uppercase tracking-wider ${index === 2 ? "border-[#c7ff45]/70 bg-[#c7ff45]/10 text-[#c7ff45]" : "border-white/10 text-white/35"}`}>
+                <div key={scope} className={`border px-3 py-3 text-center font-mono text-[11px] uppercase tracking-wider ${index === 2 ? "border-[#63d7e6]/70 bg-[#63d7e6]/10 text-[#63d7e6]" : "border-white/10 text-white/35"}`}>
                   {scope}
                 </div>
               ))}
@@ -168,7 +168,7 @@ export default function Home() {
               key={dataset.id}
               className="dataset-card group relative flex min-h-[470px] flex-col overflow-hidden border border-black/15 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(20,28,23,0.12)] sm:p-9"
             >
-              <div className={`absolute inset-x-0 top-0 h-1 ${dataset.accent === "lime" ? "bg-[#9dde2a]" : "bg-[#5dbaf0]"}`} />
+              <div className={`absolute inset-x-0 top-0 h-1 ${dataset.accent === "lime" ? "bg-[#35c9b3]" : "bg-[#6ea8fe]"}`} />
               <div className="flex items-start justify-between gap-6">
                 <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.14em] text-black/45">
                   <Database className="size-4" aria-hidden="true" />
@@ -186,7 +186,7 @@ export default function Home() {
               <div className="mt-auto pt-10">
                 <div className="mb-8 flex flex-wrap gap-2">
                   {dataset.purposes.map((purpose) => (
-                    <span key={purpose} className="rounded-full bg-[#f0f2ee] px-3 py-2 text-xs font-medium text-black/65">{purpose}</span>
+                    <span key={purpose} className="rounded-full bg-[#eaf1f6] px-3 py-2 text-xs font-medium text-black/65">{purpose}</span>
                   ))}
                 </div>
                 <div className="flex flex-wrap items-center justify-between gap-4 border-t border-black/10 pt-5">
@@ -209,7 +209,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-black/10 bg-[#eff2ec]">
+      <section className="border-y border-black/10 bg-[#e8f0f5]">
         <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 sm:py-24 lg:px-12">
           <div className="mb-12 grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
@@ -222,7 +222,7 @@ export default function Home() {
           <div className="grid border border-black/15 bg-white lg:grid-cols-2">
             <article id="scope3trace" className="scroll-mt-24 p-6 sm:p-9 lg:border-r lg:border-black/15">
               <div className="mb-8 flex items-center gap-3">
-                <span className="grid size-11 place-items-center rounded-full bg-[#c7ff45] text-black"><GitBranch className="size-5" aria-hidden="true" /></span>
+                <span className="grid size-11 place-items-center rounded-full bg-[#63d7e6] text-[#0b1f33]"><GitBranch className="size-5" aria-hidden="true" /></span>
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-black/40">Trace layer</p>
                   <h3 className="text-2xl font-semibold tracking-[-0.035em]">Scope3Trace</h3>
@@ -239,7 +239,7 @@ export default function Home() {
 
             <article id="ghgbench" className="scroll-mt-24 border-t border-black/15 p-6 sm:p-9 lg:border-t-0">
               <div className="mb-8 flex items-center gap-3">
-                <span className="grid size-11 place-items-center rounded-full bg-[#9ed8ff] text-black"><Scale className="size-5" aria-hidden="true" /></span>
+                <span className="grid size-11 place-items-center rounded-full bg-[#bbd7ff] text-[#0b1f33]"><Scale className="size-5" aria-hidden="true" /></span>
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-black/40">Evaluation layer</p>
                   <h3 className="text-2xl font-semibold tracking-[-0.035em]">GHGBench</h3>
@@ -272,7 +272,7 @@ export default function Home() {
                 <span className="font-semibold">{item}</span>
                 <span className="text-sm text-black/50">{detail}</span>
                 <span className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.09em] text-black/45">
-                  <span className="size-1.5 rounded-full bg-[#d4a72c]" />{status}
+                  <span className="size-1.5 rounded-full bg-[#c58b2a]" />{status}
                 </span>
               </div>
             ))}
@@ -297,20 +297,20 @@ export default function Home() {
         </div>
       </section>
 
-      <footer id="about" className="scroll-mt-24 bg-[#101512] text-white">
+      <footer id="about" className="scroll-mt-24 bg-[#0b1f33] text-white">
         <div className="mx-auto max-w-[1440px] px-5 py-12 sm:px-8 sm:py-16 lg:px-12">
           <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
-              <p className="mb-5 font-mono text-xs uppercase tracking-[0.16em] text-[#c7ff45]">Carbon Data Hub</p>
+              <p className="mb-5 font-mono text-xs uppercase tracking-[0.16em] text-[#63d7e6]">Carbon Data Hub</p>
               <h2 className="max-w-3xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">A clearer path from emissions evidence to research outcomes.</h2>
             </div>
-            <Button asChild size="lg" className="h-12 justify-self-start rounded-full bg-white px-6 text-[#101512] hover:bg-[#c7ff45] lg:justify-self-end">
+            <Button asChild size="lg" className="h-12 justify-self-start rounded-full bg-white px-6 text-[#0b1f33] hover:bg-[#63d7e6] lg:justify-self-end">
               <a href="#datasets">Browse datasets <ArrowRight aria-hidden="true" /></a>
             </Button>
           </div>
           <div className="mt-14 flex flex-col gap-4 border-t border-white/12 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-3">
-              <span className="grid size-7 place-items-center border border-[#c7ff45]/35 font-mono text-[10px] font-semibold text-[#c7ff45]">DC</span>
+              <span className="grid size-7 place-items-center border border-[#63d7e6]/35 font-mono text-[10px] font-semibold text-[#63d7e6]">DC</span>
               <p>A Data Cruiser research initiative</p>
             </div>
             <p>Research preview · September 2026</p>
