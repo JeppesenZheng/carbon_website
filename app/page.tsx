@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { assetPath } from "@/lib/asset-path";
 
 const datasets = [
   {
@@ -93,7 +94,7 @@ export default function Home() {
               size="sm"
               className="h-9 rounded-full border-white/20 bg-white/5 px-4 text-white shadow-none hover:border-[#63d7e6]/55 hover:bg-[#63d7e6] hover:text-[#0b1f33]"
             >
-              <a href="/data/catalog.json" download>
+              <a href={assetPath("/data/catalog.json")} download>
                 <ArrowDownToLine aria-hidden="true" />
                 Catalog
               </a>
@@ -207,7 +208,7 @@ export default function Home() {
                       </a>
                     </Button>
                     <Button asChild variant="outline" className="rounded-full border-black/20 bg-transparent px-4 shadow-none hover:border-black hover:bg-black hover:text-white">
-                      <a href={dataset.metadata} download>
+                      <a href={assetPath(dataset.metadata)} download>
                         <Braces aria-hidden="true" />
                         Metadata JSON
                       </a>
