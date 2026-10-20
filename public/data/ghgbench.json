@@ -1,7 +1,7 @@
 {
   "id": "ghgbench",
   "name": "GHGBench",
-  "publisher": "Data Cruiser",
+  "publisher": "DataCruiser",
   "category": "evaluation benchmark",
   "status": "pre-release",
   "paper": "https://arxiv.org/abs/2605.13743",

@@ -1,7 +1,7 @@
 {
   "id": "scope3trace",
   "name": "Scope3Trace",
-  "publisher": "Data Cruiser",
+  "publisher": "DataCruiser",
   "category": "value-chain trace data",
   "status": "pre-release",
   "paper": "https://arxiv.org/abs/2607.17122",

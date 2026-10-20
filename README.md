@@ -1,6 +1,6 @@
 # Carbon Data Hub
 
-An English-language Data Cruiser research initiative for the Scope3Trace and GHGBench carbon datasets.
+An English-language DataCruiser research initiative for the Scope3Trace and GHGBench carbon datasets. The visual design follows datacruiser.ai: charcoal surfaces, mint accents, Barlow typography, and a subtle signal network.
 
 ## MVP
 
@@ -54,3 +54,17 @@ when building for a root domain. Public asset links use the same prefix.
 The existing `npm run dev` and `npm run build` commands retain the original
 Vinext/Cloudflare workflow. GitHub Pages serves the static export and does not
 run server-side authentication or database features.
+
+## DataCruiser subdomain
+
+For a dedicated subdomain, build the static site at the domain root:
+
+```bash
+npm run build:subdomain
+```
+
+Upload the generated `out/` directory to the selected static host. This build removes the GitHub repository path from assets and downloads. The existing `build:pages` command continues to support the repository URL.
+
+Once the exact subdomain and host are selected, configure the custom domain in that host and add its required DNS record. If using GitHub Pages, set its custom domain before deploying; the workflow reads the domain's base path automatically. No domain or DNS settings have been changed by this design update.
+
+The Barlow and Barlow Condensed fonts are served locally under the SIL Open Font License; license notices are in `public/fonts/`.
