@@ -12,6 +12,7 @@ const datasets = [
     summary: "A structured dataset for studying how Scope 3 emissions claims connect to activities, suppliers, and underlying evidence.",
     purposes: ["Traceability", "Entity linking", "Evidence retrieval"],
     metadata: "/data/scope3trace.json", paper: "https://arxiv.org/abs/2607.17122",
+    huggingFaceUrl: null as string | null,
     questions: ["How are value-chain emissions claims linked to evidence?", "Which entities and activities appear in the trace?", "Can each record be followed back to its source context?"],
   },
   {
@@ -20,6 +21,7 @@ const datasets = [
     summary: "A benchmark dataset for evaluating models and systems that work with greenhouse-gas disclosures, calculations, and reporting tasks.",
     purposes: ["Model evaluation", "Structured extraction", "Reproducibility"],
     metadata: "/data/ghgbench.json", paper: "https://arxiv.org/abs/2605.13743",
+    huggingFaceUrl: null as string | null,
     questions: ["How reliably can a system interpret GHG information?", "Can results be compared across shared evaluation tasks?", "Are benchmark outcomes documented and repeatable?"],
   },
 ] as const;
@@ -78,16 +80,25 @@ export default function Home() {
         </section>
         <div className="research-strip"><div className="container strip-inner"><p>A DataCruiser research initiative</p><div><span><Database size={15} aria-hidden="true" /> Two complementary datasets</span><span><Braces size={15} aria-hidden="true" /> Metadata available now</span></div></div></div>
         <section id="datasets" className="section container" aria-labelledby="datasets-title">
-          <div className="section-heading"><div><p className="eyebrow">The datasets</p><h2 id="datasets-title">From source evidence<br />to measurable outcomes.</h2></div><p>Two complementary starting points for carbon research. Explore their purpose, read the papers, and access the metadata.</p></div>
+          <div className="section-heading"><div><p className="eyebrow">The datasets</p><h2 id="datasets-title">From source evidence<br />to measurable outcomes.</h2></div><p>Two complementary starting points for carbon research. Explore their purpose and read the papers. Hugging Face links will be added when available.</p></div>
           <div className="dataset-grid">
             {datasets.map(({ Icon, ...dataset }) => <article className="dataset-card" key={dataset.id}>
               <div className="card-top"><span className="dataset-icon"><Icon size={22} strokeWidth={1.5} aria-hidden="true" /></span><span className="status-label"><span className="status-dot" /> Pre-release</span></div>
               <p className="card-category">{dataset.category}</p><h3>{dataset.name}</h3><p className="card-summary">{dataset.summary}</p>
               <ul className="tags" aria-label="Research uses">{dataset.purposes.map(p => <li key={p}>{p}</li>)}</ul>
-              <div className="card-links"><a className="text-link" href={`#${dataset.anchor}`}>Explore dataset <ArrowRight size={16} aria-hidden="true" /></a><a className="muted-link" href={dataset.paper} target="_blank" rel="noreferrer">Read paper <ExternalLink size={14} aria-hidden="true" /></a></div>
+              <div className="card-links">
+                {dataset.huggingFaceUrl ? (
+                  <a className="text-link" href={dataset.huggingFaceUrl} target="_blank" rel="noreferrer">Hugging Face <ExternalLink size={14} aria-hidden="true" /></a>
+                ) : (
+                  <button className="dataset-link-placeholder" type="button" disabled title="The Hugging Face dataset link will be added when available.">
+                    Hugging Face <span>Coming soon</span>
+                  </button>
+                )}
+                <a className="muted-link" href={dataset.paper} target="_blank" rel="noreferrer">Read paper <ExternalLink size={14} aria-hidden="true" /></a>
+              </div>
             </article>)}
           </div>
-          <p className="catalog-note"><span className="status-dot" /> Metadata records are available. Research data packages, documentation, and citation records are in preparation.</p>
+          <p className="catalog-note"><span className="status-dot" /> Dataset releases will be hosted on Hugging Face. Links are coming soon.</p>
         </section>
         <section id="research" className="research-section section" aria-labelledby="research-title"><div className="container">
           <div className="section-heading"><div><p className="eyebrow">Research directions</p><h2 id="research-title">Follow the evidence.<br /><span>Then put systems to the test.</span></h2></div><p>Scope3Trace focuses on the path back to source evidence. GHGBench focuses on evaluating greenhouse-gas information tasks.</p></div>
