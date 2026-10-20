@@ -85,7 +85,6 @@ export default function Home() {
               <p className="card-category">{dataset.category}</p><h3>{dataset.name}</h3><p className="card-summary">{dataset.summary}</p>
               <ul className="tags" aria-label="Research uses">{dataset.purposes.map(p => <li key={p}>{p}</li>)}</ul>
               <div className="card-links"><a className="text-link" href={`#${dataset.anchor}`}>Explore dataset <ArrowRight size={16} aria-hidden="true" /></a><a className="muted-link" href={dataset.paper} target="_blank" rel="noreferrer">Read paper <ExternalLink size={14} aria-hidden="true" /></a></div>
-              <a className="metadata-link" href={assetPath(dataset.metadata)} download><Braces size={15} aria-hidden="true" /> Download metadata <span>JSON <ArrowDownToLine size={13} aria-hidden="true" /></span></a>
             </article>)}
           </div>
           <p className="catalog-note"><span className="status-dot" /> Metadata records are available. Research data packages, documentation, and citation records are in preparation.</p>
